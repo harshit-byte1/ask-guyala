@@ -34,5 +34,5 @@ The project was designed to:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/ask-guyala.git
+git clone https://github.com/harshit-byte1/ask-guyala.git
 cd ask-guyala
