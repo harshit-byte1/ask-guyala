@@ -16,6 +16,11 @@ The project was designed to:
 
 ---
 
+## 🔗 Live Demo
+🚀 **Try it here:** [Ask Guyala Website](https://harshit-byte1.github.io/ask-guyala/)
+
+---
+
 ## ✨ Features
 - 🔍 **Waste Lookup** – Type any waste item (e.g., “banana peel”) and get instant bin category suggestions.
 - 🎨 **Simple, Child-Friendly Interface** – Designed to be intuitive for young learners.
