@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>Ask Guyala!</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="background">
+    <img
+      id="guyala"
+      class="fade-in"
+      src="./guyala.png"
+      alt="Guyala the white bellied sea eagle"
+    />
+    <div id="content">
+      <p id="tagline" class="fade-in">Which bin does it go in?</p>
+      <h1 id="title" class="fade-in">ASK GUYALA!</h1>
+      <form id="form" class="fade-in" autocomplete="off" role="search" aria-label="Waste item search form">
+        <input
+          id="input"
+          type="text"
+          placeholder="Type a waste item"
+          autofocus
+          aria-autocomplete="list"
+          aria-controls="suggestions-list"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-activedescendant=""
+        />
+        <button id="submit_button" type="button" aria-label="Search waste item">
+          <img src="./search.svg" alt="Search icon" />
+        </button>
+        <div id="loading-spinner" aria-live="polite" role="status" style="display:none;">Loading...</div>
+      </form>
+      <ul
+        id="suggestions-list"
+        role="listbox"
+        aria-label="Search suggestions"
+        tabindex="0"
+      ></ul>
+
+      <div id="traffic-light-container">
+        <button
+          id="organic-light"
+          class="traffic-light off"
+          aria-pressed="false"
+          type="button"
+        >
+          Compost/<br />Organic
+        </button>
+        <button
+          id="recycling-light"
+          class="traffic-light off"
+          aria-pressed="false"
+          type="button"
+        >
+          Recycling
+        </button>
+        <button
+          id="waste-light"
+          class="traffic-light off"
+          aria-pressed="false"
+          type="button"
+        >
+          Waste
+        </button>
+        <button
+          id="transfer-station-light"
+          class="traffic-light off"
+          aria-pressed="false"
+          type="button"
+        >
+          Transfer<br />Station
+        </button>
+        <button
+          id="specialist-recycler-light"
+          class="traffic-light off"
+          aria-pressed="false"
+          type="button"
+        >
+          Specialist<br />Recycler
+        </button>
+      </div>
+
+      <div id="information-container">
+        <h2 id="heading"></h2><br />
+        <p id="disposal"></p><br />
+        <p id="information"></p>
+        <p id="encouragement">
+          Waste never belongs on the land. Please help protect our unique
+          natural environment and precious wildlife by disposing of your waste
+          thoughtfully. Your actions can contribute to a cleaner and healthier
+          place for all of us!
+        </p>
+      </div>
+      <p id="reminder" class="banner">
+        Want to learn more about waste and recycling in Cairns? Visit the
+        <a
+          href="https://www.cairns.qld.gov.au/water-waste-and-roads/waste-and-recycling"
+          >Cairns regional council website</a
+        >.
+      </p>
+      <p id="acknowledgement" class="banner">
+        We acknowledge the Traditional Owners and Custodians of the Cairns
+        region, the Yirrganydji, Djabuganydji, Nyagal, Buluwandji, and Guluy. We
+        honour their Elders past, present and emerging.
+      </p>
+      <p id="about"><a href="https://github.com/harshit-byte1/ask-guyala">Made by Harshit Dhingra</a></p>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

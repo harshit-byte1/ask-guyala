@@ -1,0 +1,461 @@
+
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  transition: all 0.3s;
+}
+
+/* Classes */
+.banner {
+  border-radius: 10vw;
+  height: fit-content;
+  line-height: 1.6;
+  margin: 7vw auto;
+  opacity: 0;
+  padding: 5vw;
+  text-align: left;
+  width: 90vw;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.guyala-clicked {
+  transform: rotate(200deg) translate(-10vw, -20vw) !important;
+  transition-timing-function: ease !important;
+}
+
+.off {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Updated Traffic Light Styles - solid colors, no ring */
+.traffic-light {
+  align-items: center;
+  border-radius: 50%; /* perfect circle */
+  display: flex;
+  font-size: 0px;
+  height: 12.5vw;
+  justify-content: center;
+  text-align: center;
+  width: 12.5vw;
+  background-clip: padding-box; /* prevent border bleeding */
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 1 !important; /* fully opaque */
+  transition: all 0.3s;
+}
+
+/* Solid background colors for each traffic light */
+#organic-light {
+  background-color: #008000; /* solid green */
+}
+
+#recycling-light {
+  background-color: #FFD700; /* solid gold/yellow */
+}
+
+#waste-light {
+  background-color: #DC143C; /* solid crimson/red */
+}
+
+#transfer-station-light {
+  background-color: #800080; /* solid purple */
+}
+
+#specialist-recycler-light {
+  background-color: #4169E1; /* solid royal blue */
+}
+
+/* Disabled (off) state: slightly faded but no ring */
+.off {
+  opacity: 0.3 !important;
+  background-color: inherit !important; /* keep same color but faded */
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Elements */
+a:hover {
+  color: royalblue;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Ids */
+#about {
+  margin-bottom: 14vh;
+  opacity: 0;
+  text-align: center;
+}
+
+#about a:hover {
+  color: royalblue;
+}
+
+#about a {
+  color: darkgreen;
+}
+
+#acknowledgement {
+  background: coral;
+  margin-bottom: 9vw;
+}
+
+/* Can't use background-attachment: fixed because it doesn't work on iOS. */
+#background {
+  background-image: url("./background.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: fixed;
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: scroll;
+  z-index: 0;
+}
+
+#form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 15vw;
+  display: flex;
+  margin: 5vw auto;
+  padding: 2.5vw;
+  -webkit-backdrop-filter: blur(4px);
+  width: 90vw;
+}
+
+#form button {
+  align-items: center;
+  background: rgb(199, 180, 159);
+  border: 0;
+  border-radius: 60vw;
+  cursor: pointer;
+  display: flex;
+  height: 12.5vw;
+  justify-content: center;
+  width: 12.5vw;
+}
+
+#form button:hover {
+  background-color: coral;
+}
+
+#form button img {
+  filter: invert(100%);
+  width: 6.5vw;
+}
+
+#form input {
+  background: transparent;
+  border: 0;
+  flex: 1;
+  outline: none;
+  padding-left: 5vw;
+}
+
+#guyala {
+  position: fixed;
+  top: -71vw;
+  right: 0vw;
+  transform: rotate(205deg);
+  width: 80vw;
+  z-index: 1;
+}
+
+#heading {
+  font-size: 24px;
+}
+
+#information-container {
+  backdrop-filter: blur(4px); /* This one works for Chromium browsers */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10vw;
+  line-height: 1.6;
+  margin: 5vw auto;
+  opacity: 0;
+  padding: 5vw;
+  text-align: left;
+  -webkit-backdrop-filter: blur(4px); /*This one works for Safari */
+  width: 90vw;
+}
+
+#organic-light {
+  background: green;
+}
+
+#recycling-light {
+  background:gold;
+}
+
+#reminder {
+  background: rgb(199, 180, 159);
+  margin-top: 12vw;
+}
+
+#specialist-recycler-light {
+  background:royalblue;
+}
+
+#tagline {
+  margin: 2.5vw;
+  padding-top: 33vw;
+  text-align: center;
+}
+
+#title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 10.5vw;
+  letter-spacing: 0.2rem;
+  margin: 0vw auto 9vw auto;
+  text-align: center;
+}
+
+#traffic-light-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 5vw auto;
+  width: 95vw;
+}
+
+#transfer-station-light {
+  background: purple;
+}
+
+#waste-light {
+  background:crimson;
+}
+
+
+/* Pseudo Elements */
+::placeholder {
+  color: white;
+}
+
+/* Guyala was obscuring the scrollbar. I couldn't move Guyala and keep him interactive, so instead I've hidden the scrollbar. */
+::-webkit-scrollbar, ::-webkit-scrollbar-corner {
+  width: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Classes */
+  .banner {
+    border-radius: 5vw;
+    margin: 2.5vw auto 3.5vw auto;
+    padding: 2.5vw 4vw;
+    width: 50vw;
+  }
+
+  .guyala-clicked {
+    transform: rotate(295deg) translate(-2.5vw, -5vw) !important;
+  }
+
+  .on:hover {
+    font-size: 16px;
+    height: 12vw;
+    width: 12vw;
+  }
+
+  .traffic-light {
+    height: 7vw;
+    width: 7vw;
+  }
+
+  .traffic-light-clicked {
+    height: 12vw !important;
+    width: 12vw !important;
+  }
+
+  /* Ids */
+  #about {
+    margin-bottom: 0vh;
+  }
+
+  #form {
+    margin: 2.5vw auto 2.5vw auto;
+    padding: 1.5vw;
+    width: 50vw;
+  }
+
+  #form button {
+    height: 7vw;
+    width: 7vw;
+  }
+
+  #form button img {
+    width: 3.5vw;
+  }
+
+  #form input {
+    padding-left: 2.5vw;
+  }
+
+  #guyala {
+    right: -24vw;
+    top: 5vw;
+    transform: rotate(300deg);
+    width: 40vw;
+  }
+  
+  #guyala:hover {
+    transform: rotate(295deg) translate(-2.5vw, -4vw) !important;
+    transition-timing-function: ease;
+  }
+
+  #information-container {
+    border-radius: 5vw;
+    margin: 2.5vw auto 9vw auto;
+    padding: 2.5vw 4vw;
+    width: 50vw;
+  }
+
+  #reminder {
+    margin-top: 3vw;
+  }
+
+  #tagline {
+    padding-top: 3.5vw;
+    margin: 5vw auto 5.5vw auto;
+  }
+
+  #title {
+    font-size: 6vw;
+    margin: -4vw auto 7vw auto;
+  }
+
+  #traffic-light-container {
+    margin: 1vw auto 2.5vw auto;
+    width: 54vw;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    /* Classes */
+    .banner {
+      width: 40vw;
+    }
+
+    .guyala-clicked {
+      transform: rotate(295deg) translate(-1.5vw, -4vw) !important;
+    }
+  
+    .on:hover {
+      height: 7.5vw;
+      width: 7.5vw;
+    }
+    .traffic-light {
+      height: 6vw;
+      width: 6vw;
+    }
+  
+    .traffic-light-clicked {
+      height: 7.5vw !important;
+      width: 7.5vw !important;
+    }
+  
+    /* Ids */  
+    #form {
+      width: 40vw;
+    }
+
+    #form button {
+      height: 6vw;
+      width: 6vw;
+    }
+  
+    #form button img {
+      width: 2.5vw;
+    }
+
+    #guyala {
+      right: -21vw;
+      top: 3vw;
+      transform: rotate(300deg);
+      width: 35vw;
+    }
+    
+    #guyala:hover {
+      transform: rotate(295deg) translate(-1.5vw, -4vw) !important;
+    }
+
+    #information-container {
+      width: 40vw;
+    }
+
+    #title {
+      font-size: 4vw;
+    }
+
+    #traffic-light-container {
+      width: 44vw;
+    }
+  }
+
+}
+/* Suggestions List - styled to match your green/forest theme */
+#suggestions-list {
+  background: rgba(34, 49, 26, 0.85); /* dark green with transparency */
+  border-radius: 10vw 10vw 2vw 2vw; /* rounded top corners consistent with your style */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* subtle shadow for depth */
+  color: #d6e6c3; /* soft light green text */
+  font-weight: 600;
+  list-style: none;
+  margin-top: -2vw;
+  max-height: 15vw;
+  overflow-y: auto;
+  padding-left: 0;
+  position: absolute;
+  width: 80vw;
+  z-index: 100;
+  font-size: 1rem;
+  backdrop-filter: blur(6px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(6px); /* safari */
+  border: 1px solid rgba(144, 176, 84, 0.7); /* subtle green border */
+  display: none; /* hide initially */
+  /* plus your existing styles */
+}
+
+/* Suggestion items */
+#suggestions-list li {
+  padding: 0.75vw 1.2vw;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(144, 176, 84, 0.3); /* subtle separator */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Last item no border */
+#suggestions-list li:last-child {
+  border-bottom: none;
+}
+
+/* Hover and selected styles */
+#suggestions-list li:hover,
+#suggestions-list li[aria-selected="true"],
+#suggestions-list li:focus {
+  background-color: rgba(144, 176, 84, 0.85); /* brighter green highlight */
+  color: #ffffff;
+  outline: none;
+  font-weight: 700;
+}
