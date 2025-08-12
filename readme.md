@@ -26,7 +26,7 @@ The project was designed to:
 
 ## 🛠️ Tech Stack
 - **Frontend:** HTML, CSS, JavaScript
-- **Hosting:** * GitHub 
+- **Hosting:** GitHub 
 
 ---
 
